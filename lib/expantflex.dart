@@ -18,8 +18,9 @@ class _ExpState extends State<Exp> {
               leading: Container(
                 width: 45,
                 height: 45,
+                child: Center(child: CircleAvatar(backgroundImage: AssetImage("asset/images/100k-ai-faces-6.jpg"),)),
                 decoration: BoxDecoration(
-                    color: Colors.grey, borderRadius: BorderRadius.circular(50)),
+                    color: Colors.white, borderRadius: BorderRadius.circular(50)),
               ),
               title: Padding(
                 padding: const EdgeInsets.only(left: 70),
@@ -54,7 +55,7 @@ class _ExpState extends State<Exp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 43,top: 32),
+              padding: const EdgeInsets.only(left: 43,top: 35),
               child: Container(child: Center(child: Text("23",style: TextStyle(color: Colors.white,fontSize: 7))),
                 width: 20,
                 height: 20,
@@ -83,18 +84,20 @@ class _ExpState extends State<Exp> {
                     decoration: BoxDecoration(
                         color: Colors.grey[300],borderRadius: BorderRadius.circular(15)
                     ),
-                  ),Container(
+                 child: Image.asset("asset/images/CACTUS4.jpg",fit: BoxFit.fill,),
+                  ),
+                  Container(
                     width: 60,
                     height: 80,
                     decoration: BoxDecoration(
                         color: Colors.grey[300],borderRadius: BorderRadius.circular(15)
                     ),
-                  ),Container(
+                 child: Image.asset("asset/images/CACTUS6.jpg",fit: BoxFit.fill,), ),Container(
                     width: 60,
                     height: 80,
                     decoration: BoxDecoration(
                         color: Colors.grey[300],borderRadius: BorderRadius.circular(15)
-                    ),
+                    ),child: Image.asset("asset/images/CACTUS4.jpg",fit: BoxFit.fill,),
                   ),
 
 
@@ -104,46 +107,57 @@ class _ExpState extends State<Exp> {
             ),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text("Home plants",style: TextStyle(color: Colors.black,fontSize: 13),),
-                Text("Cactus",style: TextStyle(color: Colors.black,fontSize: 13),),
-                Text("Flowers",style: TextStyle(color: Colors.black,fontSize: 13),),
+                Padding(
+                  padding: const EdgeInsets.only(left: 18),
+                  child: Text("Home plants",style: TextStyle(color: Colors.black,fontSize: 13),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 40),
+                  child: Text("Cactus",style: TextStyle(color: Colors.black,fontSize: 13),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 28),
+                  child: Text("Flowers",style: TextStyle(color: Colors.black,fontSize: 13),),
+                ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.only(left: 28,right: 28,bottom: 10,top: 10),
               child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    width: double.infinity,
-                    height: 120,
-                    decoration: BoxDecoration(
-                        color: Colors.white,borderRadius: BorderRadius.circular(15)
-                    ),
+                  Padding(
+                    padding: const EdgeInsets.only(top:20,bottom: 20),
+                    child: Container(
+                      width: double.infinity,
+                      height: 120,
+                      decoration: BoxDecoration(
+                          color: Colors.white,borderRadius: BorderRadius.circular(15)
+                      ),
                  child: Row(
-                   children: [
-                     Stack(
-                       children: [Container(   width: 140,
-                         height: 120,
-                         decoration: BoxDecoration(
-                             color: Colors.black,borderRadius: BorderRadius.only(
-                           topRight: Radius.zero,bottomLeft: Radius.circular(15),
-                         )
-                         ),
-child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
-                       ),
-                         Container(
-                           width: 40,
-                           height: 22,
+                     children: [
+                       Stack(
+                         children: [Container(   width: 140,
+                           height: 120,
                            decoration: BoxDecoration(
-                             color: Colors.white,borderRadius: BorderRadius.circular(5)
+                               color: Colors.white,borderRadius: BorderRadius.only(
+                             topRight: Radius.zero,bottomLeft: Radius.circular(15),
+                           )
                            ),
-                           child: Center(
-                             child: Text("23",
-                               style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
+child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
+                         ),
+                           Container(
+                             width: 40,
+                             height: 22,
+                             decoration: BoxDecoration(
+                               color: Colors.white,borderRadius: BorderRadius.circular(5)
                              ),
-                           ),
-                         )
-                    ] ),
+                             child: Center(
+                               child: Text("23",
+                                 style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
+                               ),
+                             ),
+                           )
+                      ] ),
 Column(
   children: [
         Padding(
@@ -195,114 +209,10 @@ Column(
 
   ],
 ),
-                   ],
+                     ],
                  ),
+                    ),
                   ),
-
-                ],
-              ),
-            ),
-
-
-
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 120,
-                  decoration: BoxDecoration(
-                      color: Colors.white,borderRadius: BorderRadius.circular(15)
-                  ),
-                  child: Row(
-                    children: [
-                      Stack(
-                          children: [Container(   width: 140,
-                              height: 120,
-                              decoration: BoxDecoration(
-                                  color: Colors.black,borderRadius: BorderRadius.only(
-                                topRight: Radius.zero,bottomLeft: Radius.circular(15),
-                              )
-                              ),
-                              child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
-                          ),
-                            Container(
-                              width: 40,
-                              height: 22,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,borderRadius: BorderRadius.circular(5)
-                              ),
-                              child: Center(
-                                child: Text("23",
-                                  style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
-                                ),
-                              ),
-                            )
-                          ] ),
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: Text("Red Cactus Plant",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 63),
-                            child: Text("On White",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5,right: 60),
-                            child: Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 13,left: 13),
-                                  child: Container(
-                                    height: 35,
-                                    width: 35,
-                                    color: Colors.white,
-                                    child: Center(child: Image.asset("asset/images/OIP (2).jpg",fit: BoxFit.cover,)),
-                                  ),
-                                ),
-                                Container(
-                                  height: 35,
-                                  width: 35,
-                                  color: Colors.white,
-                                  child: Center(child: Image.asset("asset/images/OIP (3).jpg",fit: BoxFit.cover,)),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 40),
-                            child: Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3,right: 13),
-                                  child: Text("12-32 C",style: TextStyle(
-                                    fontSize: 10,
-                                  )),
-                                ),
-                                Text("2-3 Week",style: TextStyle(
-                                    fontSize: 10
-                                ),),
-                              ],
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-
-              ],
-            ),
-          ),
-
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
                   Container(
                     width: double.infinity,
                     height: 120,
@@ -315,11 +225,11 @@ Column(
                             children: [Container(   width: 140,
                                 height: 120,
                                 decoration: BoxDecoration(
-                                    color: Colors.black,borderRadius: BorderRadius.only(
+                                    color: Colors.white,borderRadius: BorderRadius.only(
                                   topRight: Radius.zero,bottomLeft: Radius.circular(15),
                                 )
                                 ),
-                                child: Center(child: Image.asset("asset/images/OIP (1).jpg",fit: BoxFit.cover,))
+                                child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
                             ),
                               Container(
                                 width: 40,
@@ -327,7 +237,265 @@ Column(
                                 decoration: BoxDecoration(
                                     color: Colors.white,borderRadius: BorderRadius.circular(5)
                                 ),
+                                child: Center(
+                                  child: Text("23",
+                                    style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
+                                  ),
+                                ),
+                              )
+                            ] ),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Text("Aloe Plant",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 63),
+                              child: Text("",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 5,right: 60),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 13,left: 13),
+                                    child: Container(
+                                      height: 35,
+                                      width: 35,
+                                      color: Colors.white,
+                                      child: Center(child: Image.asset("asset/images/OIP (2).jpg",fit: BoxFit.cover,)),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 35,
+                                    width: 35,
+                                    color: Colors.white,
+                                    child: Center(child: Image.asset("asset/images/OIP (3).jpg",fit: BoxFit.cover,)),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 40),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 3,right: 13),
+                                    child: Text("12-32 C",style: TextStyle(
+                                      fontSize: 10,
+                                    )),
+                                  ),
+                                  Text("2-3 Week",style: TextStyle(
+                                      fontSize: 10
+                                  ),),
+                                ],
+                              ),
+                            ),
 
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top:20,bottom: 20),
+                    child: Container(
+                      width: double.infinity,
+                      height: 120,
+                      decoration: BoxDecoration(
+                          color: Colors.white,borderRadius: BorderRadius.circular(15)
+                      ),
+                      child: Row(
+                        children: [
+                          Stack(
+                              children: [Container(   width: 140,
+                                  height: 120,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,borderRadius: BorderRadius.only(
+                                    topRight: Radius.zero,bottomLeft: Radius.circular(15),
+                                  )
+                                  ),
+                                  child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
+                              ),
+                                Container(
+                                  width: 40,
+                                  height: 22,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,borderRadius: BorderRadius.circular(5)
+                                  ),
+                                  child: Center(
+                                    child: Text("33",
+                                      style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
+                                    ),
+                                  ),
+                                )
+                              ] ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Text("Cactus Plant",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 63),
+                                child: Text("White Box",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5,right: 60),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 13,left: 13),
+                                      child: Container(
+                                        height: 35,
+                                        width: 35,
+                                        color: Colors.white,
+                                        child: Center(child: Image.asset("asset/images/OIP (2).jpg",fit: BoxFit.cover,)),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 35,
+                                      width: 35,
+                                      color: Colors.white,
+                                      child: Center(child: Image.asset("asset/images/OIP (3).jpg",fit: BoxFit.cover,)),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 40),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 3,right: 13),
+                                      child: Text("12-32 C",style: TextStyle(
+                                        fontSize: 10,
+                                      )),
+                                    ),
+                                    Text("2-3 Week",style: TextStyle(
+                                        fontSize: 10
+                                    ),),
+                                  ],
+                                ),
+                              ),
+
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),     Padding(
+                    padding: const EdgeInsets.only(top:20,bottom: 20),
+                    child: Container(
+                      width: double.infinity,
+                      height: 120,
+                      decoration: BoxDecoration(
+                          color: Colors.white,borderRadius: BorderRadius.circular(15)
+                      ),
+                      child: Row(
+                        children: [
+                          Stack(
+                              children: [Container(   width: 140,
+                                  height: 120,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,borderRadius: BorderRadius.only(
+                                    topRight: Radius.zero,bottomLeft: Radius.circular(15),
+                                  )
+                                  ),
+                                  child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
+                              ),
+                                Container(
+                                  width: 40,
+                                  height: 22,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,borderRadius: BorderRadius.circular(5)
+                                  ),
+                                  child: Center(
+                                    child: Text("13",
+                                      style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
+                                    ),
+                                  ),
+                                )
+                              ] ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Text("Red Cactus Plant",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 63),
+                                child: Text("On White",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5,right: 60),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 13,left: 13),
+                                      child: Container(
+                                        height: 35,
+                                        width: 35,
+                                        color: Colors.white,
+                                        child: Center(child: Image.asset("asset/images/OIP (2).jpg",fit: BoxFit.cover,)),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 35,
+                                      width: 35,
+                                      color: Colors.white,
+                                      child: Center(child: Image.asset("asset/images/OIP (3).jpg",fit: BoxFit.cover,)),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 40),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 3,right: 13),
+                                      child: Text("12-32 C",style: TextStyle(
+                                        fontSize: 10,
+                                      )),
+                                    ),
+                                    Text("2-3 Week",style: TextStyle(
+                                        fontSize: 10
+                                    ),),
+                                  ],
+                                ),
+                              ),
+
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),     Container(
+                    width: double.infinity,
+                    height: 120,
+                    decoration: BoxDecoration(
+                        color: Colors.white,borderRadius: BorderRadius.circular(15)
+                    ),
+                    child: Row(
+                      children: [
+                        Stack(
+                            children: [Container(   width: 140,
+                                height: 120,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,borderRadius: BorderRadius.only(
+                                  topRight: Radius.zero,bottomLeft: Radius.circular(15),
+                                )
+                                ),
+                                child: Center(child: Image.asset("asset/images/download.jpg",fit: BoxFit.cover,))
+                            ),
+                              Container(
+                                width: 40,
+                                height: 22,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,borderRadius: BorderRadius.circular(5)
+                                ),
                                 child: Center(
                                   child: Text("23",
                                     style:TextStyle(fontWeight: FontWeight.bold,fontSize: 17) ,
@@ -393,6 +561,10 @@ Column(
                 ],
               ),
             ),
+
+
+
+
 
 
           ] ),
