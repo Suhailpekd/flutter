@@ -9,7 +9,7 @@ class Radio2 extends StatefulWidget {
 
 class _Radio2State extends State<Radio2> {
   var gender= "male";
-  var dropdownvalue="item1";
+  var dropdownvalue="item 1";
   var items=[
     "item 1",
     "item 2",
@@ -24,15 +24,17 @@ class _Radio2State extends State<Radio2> {
       body: SafeArea(
         child: Column(
           children: [
-            RadioListTile(
-              groupValue: gender,
-              value: "male",
-              onChanged: (value) =>
+            Row(
+              children: [
+                RadioListTile(
+                  groupValue: gender,
+                  value: "male",
+                  onChanged: (value) =>
        setState(() {
          gender=value.toString();
 
        }),
-            ),
+                ),
 
             RadioListTile(value: "female", groupValue: gender, onChanged: (value) =>    setState(() {
               gender=value.toString();
@@ -46,9 +48,18 @@ class _Radio2State extends State<Radio2> {
               gender=value.toString();
 
             }),),
-            
+          ],
+        ),
 
-            DropdownButton(items: m items, onChanged: onChanged)
+
+            DropdownButton(items: items.map((String items) => DropdownMenuItem(value: items,child: Text(
+              items
+            ),)).toList(),value: dropdownvalue, onChanged:(String? newvalue){
+              setState(() {
+                dropdownvalue=newvalue!;
+              });
+
+            }),
 
 
 

@@ -12,6 +12,8 @@ class Form3 extends StatefulWidget {
 }
 
 class _Form3State extends State<Form3> {
+  var gender= "male";
+
   var user = TextEditingController();
   var email = TextEditingController();
   var phone = TextEditingController();
@@ -20,6 +22,15 @@ class _Form3State extends State<Form3> {
   var postpin = TextEditingController();
   var password = TextEditingController();
   final formkey = GlobalKey<FormState>();
+  var dropdownvalue="item 1";
+  var items=[
+    "item 1",
+    "item 2",
+    "item 3",
+    "item 4",
+    "item 5",
+    "item 6"
+  ];
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -59,6 +70,51 @@ class _Form3State extends State<Form3> {
                                 child: Text("Registration Form",
                                     style: TextStyle(fontSize: 29)),
                               ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: RadioListTile(
+                                      groupValue: gender,
+                                      title: Text('male'),
+                                      value: "male",
+                                      onChanged: (value) =>
+                                          setState(() {
+                                            gender=value.toString();
+
+                                          }),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: RadioListTile(
+                                      groupValue: gender,
+                                      title: Text('female'),
+                                      value: "female",
+                                      onChanged: (value) =>
+                                          setState(() {
+                                            gender=value.toString();
+
+                                          }),
+                                    ),
+                                  ),
+
+
+
+                              // Expanded(
+                              //   child: RadioListTile(value: "female", groupValue: gender, onChanged: (value) =>    setState(() {
+                              //     gender=value.toString();
+                              //
+                              //   }),title: Text("female"),
+                              //     dense: mounted,
+                              //     shape: OutlineInputBorder(borderRadius: BorderRadius.zero,),
+                              //     subtitle: Text("suhahahahahah"),
+                              //   ),
+                              // ),
+                              // RadioListTile(value: "others", groupValue: gender, onChanged: (value) =>    setState(() {
+                              //   gender=value.toString();
+                              //
+                              // }),),
+                                ],
+                          ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 20),
                                 child: TextFormField(
@@ -77,7 +133,8 @@ class _Form3State extends State<Form3> {
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(14))))),
                               ),
-                              Padding(
+
+                          Padding(
                                 padding: const EdgeInsets.only(top: 20),
                                 child: TextFormField(
                                     decoration: InputDecoration(
@@ -93,7 +150,7 @@ class _Form3State extends State<Form3> {
                                         return "enter your emeil id";
                                       }
                                       else{
-                                        print('object');
+                                        print(email);
                                       }
                                     }),
                               ),
@@ -131,7 +188,18 @@ class _Form3State extends State<Form3> {
                                         labelText: "Current Place",
                                         border: OutlineInputBorder(
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(14))))),
+                                                Radius.circular(14))))
+                                ),
+                              ),
+                              DropdownButton(items: items.map((String items) => DropdownMenuItem(value: items,child: Text(
+                                  items
+                              ),)).toList(),value: dropdownvalue, onChanged:(String? newvalue){
+                                setState(() {
+                                  dropdownvalue=newvalue!;
+                                });
+
+                              },
+                                elevation: 8,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 20),
@@ -189,12 +257,16 @@ class _Form3State extends State<Form3> {
                                                 Radius.circular(14))))),
                               ),
                               InkWell(
-                                onTap: () {
+                                onTap: () {print(dropdownvalue);
+                                  print(gender);
+                                  
                                   if (formkey.currentState!.validate()) {
-                                    print("valid");
+                                    print(password.text);print(user.text);print(email.text);
                                   }
                                   else {print("validation failed");
                                 };},
+
+
                                 child: Container(
                                   width: 180,
                                   height: 55,
