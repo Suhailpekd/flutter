@@ -9,6 +9,7 @@ import 'Stack2.dart';
 import 'app.dart';
 import 'calcoooo.dart';
 import 'datepick.dart';
+import 'drawer.dart';
 import 'expantflex.dart';
 import 'furniture2.dart';
 import 'navigationprctce.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Navig(),
+      home: const Drwr(),
     );
   }
 }
